@@ -2,86 +2,96 @@ using JuMP, CPLEX, Gurobi, LinearAlgebra
 include("../../MultiObjectiveAlgorithms.jl/src/MultiObjectiveAlgorithms.jl")
 import .MultiObjectiveAlgorithms as MOA
 
-fname = "./instances/QKP_10_100_50"
-
-include(fname)
-println("Q1 is PSD ? ", minimum(eigvals(Q1))>=0.0 ) 
-println("Q2 is PSD ? ", minimum(eigvals(Q2))>=0.0 ) 
 
 
-model = Model()
-# set_silent(model)
+function solve_kQKP(fname ; algo_bb =false, algo_eps=false, heur=false )
+    include(fname)
+    # println("Q1 is PSD ? ", minimum(eigvals(Q1))>=0.0 ) 
+    # println("Q2 is PSD ? ", minimum(eigvals(Q2))>=0.0 ) 
 
-@variable(model, x[1:n], Bin)
+    model = Model()
+    set_silent(model)
 
-@objective(model, Max, [x'*Q1*x, x'*Q2*x])
+    @variable(model, x[1:n], Bin)
 
-@constraint(model, x'*w ≤ W)
-@constraint(model, sum(x) == k)
+    @objective(model, Max, [x'*Q1*x, x'*Q2*x])
 
-
-set_optimizer(model, () -> MOA.Optimizer(Gurobi.Optimizer))
-
-
-set_attribute(model, MOA.Algorithm(), MOA.MultiObjectiveBranchBound())
-set_attribute(model, MOA.LowerBoundsLimit(), 5)
+    @constraint(model, x'*w ≤ W)
+    @constraint(model, sum(x) == k)
 
 
-# set_attribute(model, MOA.Algorithm(), MOA.EpsilonConstraint())
-# set_attribute(model, MOA.EpsilonConstraintStep(), 0.01)
+    set_optimizer(model, () -> MOA.Optimizer(Gurobi.Optimizer))
+
+    if algo_bb
+        set_attribute(model, MOA.Algorithm(), MOA.MultiObjectiveBranchBound())
+        set_attribute(model, MOA.LowerBoundsLimit(), 5)
+        set_attribute(model, MOA.ConvexQCR(), true)
+        set_attribute(model, MOA.Heuristic(), heur)
+
+    elseif algo_eps
+        set_attribute(model, MOA.Algorithm(), MOA.EpsilonConstraint())
+        set_attribute(model, MOA.EpsilonConstraintStep(), 0.01)
+    else
+        @error("unknown algo parameter " )
+        return []
+    end
 
 
-optimize!(model)
-solution_summary(model)
+    optimize!(model)
+    solution_summary(model)
+    println("total time ", solve_time(model) )
+    
+    nb_sol = result_count(model) ; sols = []
+    println(nb_sol, " non dominated sols ")
+    for i in 1:nb_sol
+        @assert is_solved_and_feasible(model; result = i)
+        println(objective_value(model; result = i) )
+        push!(sols, objective_value(model; result = i))
+        println("sol: ", value.(x ; result = i))
+    end
 
 
-nb_sol = result_count(model)
-for i in 1:nb_sol
-    @assert is_solved_and_feasible(model; result = i)
-    println(objective_value(model; result = i) )
+
+    if algo_bb
+        println("total nodes: ",  node_count(model) )
+
+        println("pruned nodes: ", get_attribute(model, MOA.PrunedNodeCount()) )
+        
+        println("heuristic time ", get_attribute(model, MOA.HeuristicTime()) )
+    end
+
+    return sols
 end
 
 
-# # epsilon N
-# sol_epsilon = [
-    # [227.0, 20.0]
-    # [184.0, 112.0]
-    # [139.0, 163.0]
-    # [126.0, 197.0]
-    # [87.0, 243.0]
-    # [55.0, 254.0]
-    # [40.0, 287.0]
-    # [37.0, 296.0]
-    # [0.0, 300.0]
-# ]
-
-# [226.99999992253268, 20.00000007147644]
-# [226.99999611194795, 20.00000368750588]
-# [226.9999925316811, 20.000005864169978]
-# [226.99999036169856, 20.000008896829794]
-# [226.9999752168231, 20.000021504346623]
-# [226.99993934912678, 20.000055750309215]
-# [183.99999710158556, 111.999999729653]
-# [139.0, 163.0]
-# [126.0, 172.0]
-# [125.99999998949774, 196.99999963214847]
-# [86.99999999531846, 242.99999998933254]
-# [55.0, 254.0]
-# [39.99999929870562, 286.99999807036795]
-# [36.999999792326285, 295.99999928276026]
-# [4.662841980288453e-8, 299.99999989852256]
-# total nodes: 161
-# pruned nodes: 68
+fname = "./instances/QKP_20_100_100"
 
 
 
 
-# [148.99999998220613, 51.00000000968117]
-# [73.00000001817422, 153.99997389123476]
-# [73.00000000574757, 153.99999998172487]
-# [59.99999995045937, 190.99999987353675]
-# total nodes: 23
-# pruned nodes: 9
+bb_sols = solve_kQKP(fname, algo_bb = true, heur=true  )
+# bb_heur_sols = solve_kQKP(fname, algo_bb = true, heur=true  )
+
+epsilon_sols = solve_kQKP(fname, algo_eps = true  )
+
+# y_l = epsilon_sols[1]
+# λ = [0.4, 0.6]
+
+# for y in epsilon_sols 
+#     println("y = $y , ", y'*λ, " is extreme point ? ", y'*λ>= y_l'*λ) 
+# end
+
+
+for sol in epsilon_sols
+    if !(sol in bb_sols)
+        println("error MOBB")
+    end
+
+    # if !(sol in bb_heur_sols)
+    #     println("error MOBB heuristic")
+    # end
+    
+end
 
 
 
@@ -92,7 +102,42 @@ end
 #     end
 # end
 
-
-println("total nodes: ",  node_count(model) )
-
-println("pruned nodes: ", get_attribute(model, MOA.PrunedNodeCount()) )
+# # epsilon
+# # 17 non dominated sols 
+# total time 72.01793694496155
+# 17 non dominated sols 
+# [257.0, 33.0] ok
+# sol: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+# [223.0, 38.0]
+# sol: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+# [202.0, 53.0]
+# sol: [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+# [199.0, 91.0]
+# sol: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0]
+# [193.0, 108.0]
+# sol: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0]
+# [188.0, 120.0] ok 
+# sol: [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+# [180.0, 125.0]
+# sol: [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+# [175.0, 126.0]
+# sol: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+# [169.0, 136.0]
+# sol: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0]
+# [168.0, 143.0] ok
+# sol: [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0]
+# [164.0, 192.0]
+# sol: [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+# [162.0, 197.0]
+# sol: [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0]
+# [134.0, 208.0]
+# sol: [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+# [127.0, 211.0]
+# sol: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0]
+# [110.0, 228.0]
+# sol: [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0]
+# [97.0, 231.0]
+# sol: [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0]
+# [90.0, 284.0] ok
+# sol: [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0]
+ 
