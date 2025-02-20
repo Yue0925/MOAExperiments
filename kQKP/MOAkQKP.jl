@@ -27,6 +27,8 @@ function solve_kQKP(fname ; algo_bb =false, algo_eps=false, heur=false )
         set_attribute(model, MOA.LowerBoundsLimit(), 5)
         set_attribute(model, MOA.ConvexQCR(), true)
         set_attribute(model, MOA.Heuristic(), heur)
+        set_attribute(model, MOA.Preproc(), 1)
+
 
     elseif algo_eps
         set_attribute(model, MOA.Algorithm(), MOA.EpsilonConstraint())
@@ -64,7 +66,7 @@ function solve_kQKP(fname ; algo_bb =false, algo_eps=false, heur=false )
 end
 
 
-fname = "./instances/QKP_20_100_100"
+fname = "./instances/QKP_10_100_75"
 
 
 
@@ -82,16 +84,16 @@ epsilon_sols = solve_kQKP(fname, algo_eps = true  )
 # end
 
 
-for sol in epsilon_sols
-    if !(sol in bb_sols)
-        println("error MOBB")
-    end
+# for sol in epsilon_sols
+#     if !(sol in bb_sols)
+#         println("error MOBB")
+#     end
 
-    # if !(sol in bb_heur_sols)
-    #     println("error MOBB heuristic")
-    # end
+#     # if !(sol in bb_heur_sols)
+#     #     println("error MOBB heuristic")
+#     # end
     
-end
+# end
 
 
 
@@ -101,43 +103,3 @@ end
 #         @error("different solutions with epsilon constant")
 #     end
 # end
-
-# # epsilon
-# # 17 non dominated sols 
-# total time 72.01793694496155
-# 17 non dominated sols 
-# [257.0, 33.0] ok
-# sol: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0]
-# [223.0, 38.0]
-# sol: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]
-# [202.0, 53.0]
-# sol: [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-# [199.0, 91.0]
-# sol: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0]
-# [193.0, 108.0]
-# sol: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0]
-# [188.0, 120.0] ok 
-# sol: [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]
-# [180.0, 125.0]
-# sol: [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-# [175.0, 126.0]
-# sol: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]
-# [169.0, 136.0]
-# sol: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0]
-# [168.0, 143.0] ok
-# sol: [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0]
-# [164.0, 192.0]
-# sol: [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-# [162.0, 197.0]
-# sol: [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0]
-# [134.0, 208.0]
-# sol: [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-# [127.0, 211.0]
-# sol: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0]
-# [110.0, 228.0]
-# sol: [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0]
-# [97.0, 231.0]
-# sol: [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0]
-# [90.0, 284.0] ok
-# sol: [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0]
- 
