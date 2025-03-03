@@ -1,0 +1,573 @@
+./instances/QKP_10_100_100 ... 
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms._is_integer :: Tuple{Vector{Float64}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.isRoot :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.hasNonExploredChild :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Base.delete! :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.prune! :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.PrunedType}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.getPartialAssign :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.setVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.removeVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addOneBound :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.initTree :: Tuple{Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addTree :: Tuple{Any, Any, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.nextNodeTree :: Tuple{Any, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.MOLP :: Tuple{Any, Main.MultiObjectiveAlgorithms.Optimizer, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.computeLBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.Optimizer, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.updateUBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.fullyExplicitDominanceTest :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.MultiObjectiveBranchBound :: Union{}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms._loadMatrices :: Tuple{Main.MultiObjectiveAlgorithms.MultiObjectiveBranchBound, Main.MultiObjectiveAlgorithms.Optimizer}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.relaxVariables :: Tuple{Main.MultiObjectiveAlgorithms.Optimizer}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms._is_integer :: Tuple{Vector{Float64}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.isRoot :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.hasNonExploredChild :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Base.delete! :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.prune! :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.PrunedType}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.getPartialAssign :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.setVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.removeVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addOneBound :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.initTree :: Tuple{Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addTree :: Tuple{Any, Any, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.nextNodeTree :: Tuple{Any, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.MOLP :: Tuple{Any, Main.MultiObjectiveAlgorithms.Optimizer, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.computeLBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.Optimizer, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.updateUBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.fullyExplicitDominanceTest :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms._is_integer :: Tuple{Vector{Float64}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.isRoot :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.hasNonExploredChild :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Base.delete! :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.prune! :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.PrunedType}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.getPartialAssign :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.setVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.removeVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addOneBound :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.initTree :: Tuple{Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addTree :: Tuple{Any, Any, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.nextNodeTree :: Tuple{Any, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.MOLP :: Tuple{Any, Main.MultiObjectiveAlgorithms.Optimizer, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.computeLBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.Optimizer, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.updateUBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.fullyExplicitDominanceTest :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.MultiObjectiveBranchBound :: Union{}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms._loadMatrices :: Tuple{Main.MultiObjectiveAlgorithms.MultiObjectiveBranchBound, Main.MultiObjectiveAlgorithms.Optimizer}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.relaxVariables :: Tuple{Main.MultiObjectiveAlgorithms.Optimizer}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+warm up ...
+Set parameter TokenServer to value "licenses.calcul.univ-paris13.fr"
+total time 6.268182992935181
+2 non dominated sols 
+[161.0, 90.0]
+sol: [0.0, 0.0, 1.0, 1.0, 0.0]
+[126.0, 120.0]
+sol: [1.0, 0.0, 0.0, 1.0, 0.0]
+Set parameter TokenServer to value "licenses.calcul.univ-paris13.fr"
+heuristic iters 5 with time(s) 4.4928
+total time 36.444485902786255
+2 non dominated sols 
+[161.0, 90.0]
+sol: [0.0, 0.0, 1.0, 1.0, 0.0]
+[126.0, 120.0]
+sol: [1.0, 0.0, 0.0, 1.0, 0.0]
+total nodes: 15
+pruned nodes: 8
+heuristic time 4.4928
+
+
+solving ./instances/QKP_10_100_100	 with 	 epsilon
+Set parameter TokenServer to value "licenses.calcul.univ-paris13.fr"
+total time 0.1611630916595459
+9 non dominated sols 
+[237.0, 22.0]
+sol: [-0.0, -0.0, -0.0, -0.0, -0.0, 0.0, 1.0, -0.0, -0.0, 1.0]
+[215.0, 40.0]
+sol: [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0]
+[201.0, 92.0]
+sol: [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0]
+[182.0, 109.0]
+sol: [-0.0, 1.0, -0.0, -0.0, -0.0, 1.0, -0.0, -0.0, -0.0, -0.0]
+[176.0, 117.0]
+sol: [-0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 1.0, 1.0, -0.0, -0.0]
+[170.0, 128.0]
+sol: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0]
+[133.0, 212.0]
+sol: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0]
+[105.0, 247.0]
+sol: [0.0, 0.0, 0.0, 0.0, 1.0, -0.0, -0.0, 0.0, 1.0, 0.0]
+[100.0, 277.0]
+sol: [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0]
+./instances/QKP_10_100_25 ... 
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms._is_integer :: Tuple{Vector{Float64}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.isRoot :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.hasNonExploredChild :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Base.delete! :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.prune! :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.PrunedType}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.getPartialAssign :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.setVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.removeVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addOneBound :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.initTree :: Tuple{Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addTree :: Tuple{Any, Any, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.nextNodeTree :: Tuple{Any, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.MOLP :: Tuple{Any, Main.MultiObjectiveAlgorithms.Optimizer, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.computeLBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.Optimizer, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.updateUBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.fullyExplicitDominanceTest :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.MultiObjectiveBranchBound :: Union{}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms._loadMatrices :: Tuple{Main.MultiObjectiveAlgorithms.MultiObjectiveBranchBound, Main.MultiObjectiveAlgorithms.Optimizer}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.relaxVariables :: Tuple{Main.MultiObjectiveAlgorithms.Optimizer}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms._is_integer :: Tuple{Vector{Float64}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.isRoot :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.hasNonExploredChild :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Base.delete! :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.prune! :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.PrunedType}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.getPartialAssign :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.setVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.removeVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addOneBound :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.initTree :: Tuple{Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addTree :: Tuple{Any, Any, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.nextNodeTree :: Tuple{Any, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.MOLP :: Tuple{Any, Main.MultiObjectiveAlgorithms.Optimizer, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.computeLBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.Optimizer, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.updateUBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.fullyExplicitDominanceTest :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms._is_integer :: Tuple{Vector{Float64}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.isRoot :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.hasNonExploredChild :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Base.delete! :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.prune! :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.PrunedType}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.getPartialAssign :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.setVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.removeVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addOneBound :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.initTree :: Tuple{Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addTree :: Tuple{Any, Any, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.nextNodeTree :: Tuple{Any, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.MOLP :: Tuple{Any, Main.MultiObjectiveAlgorithms.Optimizer, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.computeLBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.Optimizer, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.updateUBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.fullyExplicitDominanceTest :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.MultiObjectiveBranchBound :: Union{}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms._loadMatrices :: Tuple{Main.MultiObjectiveAlgorithms.MultiObjectiveBranchBound, Main.MultiObjectiveAlgorithms.Optimizer}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.relaxVariables :: Tuple{Main.MultiObjectiveAlgorithms.Optimizer}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+warm up ...
+Set parameter TokenServer to value "licenses.calcul.univ-paris13.fr"
+total time 6.801922082901001
+2 non dominated sols 
+[161.0, 90.0]
+sol: [0.0, 0.0, 1.0, 1.0, 0.0]
+[126.0, 120.0]
+sol: [1.0, 0.0, 0.0, 1.0, 0.0]
+Set parameter TokenServer to value "licenses.calcul.univ-paris13.fr"
+heuristic iters 5 with time(s) 5.027
+total time 39.47065997123718
+2 non dominated sols 
+[161.0, 90.0]
+sol: [0.0, 0.0, 1.0, 1.0, 0.0]
+[126.0, 120.0]
+sol: [1.0, 0.0, 0.0, 1.0, 0.0]
+total nodes: 15
+pruned nodes: 8
+heuristic time 5.027
+
+
+solving ./instances/QKP_10_100_25	 with 	 epsilon
+Set parameter TokenServer to value "licenses.calcul.univ-paris13.fr"
+total time 0.1869218349456787
+7 non dominated sols 
+[126.0, 117.0]
+sol: [-0.0, -0.0, -0.0, -0.0, 1.0, -0.0, -0.0, -0.0, -0.0, 1.0]
+[95.0, 190.0]
+sol: [-0.0, -0.0, -0.0, -0.0, 1.0, -0.0, 1.0, -0.0, -0.0, -0.0]
+[92.0, 191.0]
+sol: [-0.0, -0.0, -0.0, -0.0, 1.0, 1.0, -0.0, -0.0, -0.0, -0.0]
+[82.0, 197.0]
+sol: [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0]
+[71.0, 211.0]
+sol: [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0]
+[7.0, 282.0]
+sol: [-0.0, -0.0, 1.0, -0.0, 1.0, -0.0, -0.0, -0.0, -0.0, -0.0]
+[0.0, 285.0]
+sol: [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0]
+./instances/QKP_10_100_50 ... 
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms._is_integer :: Tuple{Vector{Float64}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.isRoot :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.hasNonExploredChild :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Base.delete! :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.prune! :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.PrunedType}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.getPartialAssign :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.setVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.removeVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addOneBound :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.initTree :: Tuple{Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addTree :: Tuple{Any, Any, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.nextNodeTree :: Tuple{Any, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.MOLP :: Tuple{Any, Main.MultiObjectiveAlgorithms.Optimizer, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.computeLBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.Optimizer, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.updateUBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.fullyExplicitDominanceTest :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.MultiObjectiveBranchBound :: Union{}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms._loadMatrices :: Tuple{Main.MultiObjectiveAlgorithms.MultiObjectiveBranchBound, Main.MultiObjectiveAlgorithms.Optimizer}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.relaxVariables :: Tuple{Main.MultiObjectiveAlgorithms.Optimizer}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms._is_integer :: Tuple{Vector{Float64}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.isRoot :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.hasNonExploredChild :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Base.delete! :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.prune! :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.PrunedType}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.getPartialAssign :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.setVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.removeVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addOneBound :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.initTree :: Tuple{Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addTree :: Tuple{Any, Any, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.nextNodeTree :: Tuple{Any, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.MOLP :: Tuple{Any, Main.MultiObjectiveAlgorithms.Optimizer, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.computeLBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.Optimizer, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.updateUBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.fullyExplicitDominanceTest :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms._is_integer :: Tuple{Vector{Float64}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.isRoot :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.hasNonExploredChild :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Base.delete! :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.prune! :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.PrunedType}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.getPartialAssign :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.setVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.removeVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addOneBound :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.initTree :: Tuple{Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addTree :: Tuple{Any, Any, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.nextNodeTree :: Tuple{Any, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.MOLP :: Tuple{Any, Main.MultiObjectiveAlgorithms.Optimizer, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.computeLBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.Optimizer, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.updateUBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.fullyExplicitDominanceTest :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.MultiObjectiveBranchBound :: Union{}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms._loadMatrices :: Tuple{Main.MultiObjectiveAlgorithms.MultiObjectiveBranchBound, Main.MultiObjectiveAlgorithms.Optimizer}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.relaxVariables :: Tuple{Main.MultiObjectiveAlgorithms.Optimizer}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+warm up ...
+Set parameter TokenServer to value "licenses.calcul.univ-paris13.fr"
+total time 7.247249126434326
+2 non dominated sols 
+[161.0, 90.0]
+sol: [0.0, 0.0, 1.0, 1.0, 0.0]
+[126.0, 120.0]
+sol: [1.0, 0.0, 0.0, 1.0, 0.0]
+Set parameter TokenServer to value "licenses.calcul.univ-paris13.fr"
+heuristic iters 7 with time(s) 6.3008
+total time 41.213310956954956
+2 non dominated sols 
+[161.0, 90.0]
+sol: [0.0, 0.0, 1.0, 1.0, 0.0]
+[126.0, 120.0]
+sol: [1.0, 0.0, 0.0, 1.0, 0.0]
+total nodes: 15
+pruned nodes: 8
+heuristic time 6.3008
+
+
+solving ./instances/QKP_10_100_50	 with 	 epsilon
+Set parameter TokenServer to value "licenses.calcul.univ-paris13.fr"
+total time 0.22248005867004395
+9 non dominated sols 
+[227.0, 20.0]
+sol: [1.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0.0, 1.0]
+[184.0, 112.0]
+sol: [1.0, -0.0, 1.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0.0, -0.0]
+[139.0, 163.0]
+sol: [-0.0, 1.0, -0.0, -0.0, 1.0, -0.0, -0.0, -0.0, 0.0, -0.0]
+[126.0, 197.0]
+sol: [1.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 1.0, 0.0, -0.0]
+[87.0, 243.0]
+sol: [-0.0, 1.0, -0.0, -0.0, -0.0, -0.0, -0.0, 1.0, 0.0, -0.0]
+[55.0, 254.0]
+sol: [0.0, 1.0, 1.0, 0.0, -0.0, 0.0, 0.0, 0.0, 0.0, -0.0]
+[40.0, 287.0]
+sol: [-0.0, -0.0, 1.0, 0.0, 0.0, 0.0, -0.0, 1.0, 0.0, -0.0]
+[37.0, 296.0]
+sol: [-0.0, -0.0, -0.0, -0.0, 1.0, -0.0, -0.0, 1.0, 0.0, -0.0]
+[0.0, 300.0]
+sol: [0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+./instances/QKP_10_100_75 ... 
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms._is_integer :: Tuple{Vector{Float64}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.isRoot :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.hasNonExploredChild :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Base.delete! :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.prune! :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.PrunedType}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.getPartialAssign :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.setVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.removeVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addOneBound :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.initTree :: Tuple{Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addTree :: Tuple{Any, Any, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.nextNodeTree :: Tuple{Any, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.MOLP :: Tuple{Any, Main.MultiObjectiveAlgorithms.Optimizer, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.computeLBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.Optimizer, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.updateUBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.fullyExplicitDominanceTest :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.MultiObjectiveBranchBound :: Union{}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms._loadMatrices :: Tuple{Main.MultiObjectiveAlgorithms.MultiObjectiveBranchBound, Main.MultiObjectiveAlgorithms.Optimizer}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.relaxVariables :: Tuple{Main.MultiObjectiveAlgorithms.Optimizer}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms._is_integer :: Tuple{Vector{Float64}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.isRoot :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.hasNonExploredChild :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Base.delete! :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.prune! :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.PrunedType}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.getPartialAssign :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.setVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.removeVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addOneBound :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.initTree :: Tuple{Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addTree :: Tuple{Any, Any, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.nextNodeTree :: Tuple{Any, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.MOLP :: Tuple{Any, Main.MultiObjectiveAlgorithms.Optimizer, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.computeLBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.Optimizer, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.updateUBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.fullyExplicitDominanceTest :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms._is_integer :: Tuple{Vector{Float64}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.isRoot :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.hasNonExploredChild :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Base.delete! :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.prune! :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.PrunedType}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.getPartialAssign :: Tuple{Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.setVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.removeVarBounds :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addOneBound :: Tuple{Main.MultiObjectiveAlgorithms.Node, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.initTree :: Tuple{Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.addTree :: Tuple{Any, Any, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.nextNodeTree :: Tuple{Any, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.MOLP :: Tuple{Any, Main.MultiObjectiveAlgorithms.Optimizer, Main.MultiObjectiveAlgorithms.Node}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.computeLBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Main.MultiObjectiveAlgorithms.Optimizer, Any, Vector{Dict{MathOptInterface.VariableIndex, MathOptInterface.ConstraintIndex}}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.updateUBS :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.fullyExplicitDominanceTest :: Tuple{Main.MultiObjectiveAlgorithms.Node, Vector{Main.MultiObjectiveAlgorithms.SupportedSolutionPoint}, Any}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.MultiObjectiveBranchBound :: Union{}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms._loadMatrices :: Tuple{Main.MultiObjectiveAlgorithms.MultiObjectiveBranchBound, Main.MultiObjectiveAlgorithms.Optimizer}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+┌ Warning: Replacing docs for `Main.MultiObjectiveAlgorithms.relaxVariables :: Tuple{Main.MultiObjectiveAlgorithms.Optimizer}` in module `Main.MultiObjectiveAlgorithms`
+└ @ Base.Docs docs/Docs.jl:240
+warm up ...
+Set parameter TokenServer to value "licenses.calcul.univ-paris13.fr"
+total time 6.201588869094849
+2 non dominated sols 
+[161.0, 90.0]
+sol: [0.0, 0.0, 1.0, 1.0, 0.0]
+[126.0, 120.0]
+sol: [1.0, 0.0, 0.0, 1.0, 0.0]
+Set parameter TokenServer to value "licenses.calcul.univ-paris13.fr"
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd-magi66: error: *** STEP 12655.3 ON magi66 CANCELLED AT 2025-02-23T16:34:54 DUE TO TIME LIMIT ***
+slurmstepd-magi66: error: *** JOB 12655 ON magi66 CANCELLED AT 2025-02-23T16:34:54 DUE TO TIME LIMIT ***

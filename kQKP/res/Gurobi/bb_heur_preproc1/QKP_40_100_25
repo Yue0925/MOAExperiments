@@ -1,0 +1,3 @@
+heur = true
+LBS_limit = 5
+preproc = 1

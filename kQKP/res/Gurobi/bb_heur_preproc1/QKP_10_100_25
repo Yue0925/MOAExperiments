@@ -1,9 +1,9 @@
 heur = true
 LBS_limit = 5
 preproc = 1
-total_time = 34.08
+total_time = 2.73
 NDP = 7
 total_nodes = 57
 pruned_nodes = 29
-heur_time = 5.24
+heur_time = 2.06
 Y_N = Any[[126.0, 117.0], [95.0, 190.0], [92.0, 191.0], [82.0, 197.0], [71.0, 211.0], [7.0, 282.0], [-0.0, 285.0]]

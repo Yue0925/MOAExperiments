@@ -76,7 +76,7 @@ function run(fname)
     print(fout, inst, " & ", n, " & ", d, " & ")
 
     epsilon("./res/Gurobi/epsilon/" * inst, fout)
-    bb_heur("./res/Gurobi/bb_heur/" * inst, fout)
+    # bb_heur("./res/Gurobi/bb_heur/" * inst, fout)
     bb_heur_preproc1("./res/Gurobi/bb_heur_preproc1/" * inst, fout)
 
     println(fout, "\\\\")

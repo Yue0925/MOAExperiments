@@ -5,7 +5,12 @@ function colpmeleQ2()
     folder = "./instances/"
     for file in readdir(folder)
         include(folder * file)
+
+        if parse(Int64, split(file, "_")[2]) < 30
+            continue
+        end
         println(file * "...")
+
         fout = open(folder * file, "a")
         println(fout, "inst_name = \"$file\" ")
         
