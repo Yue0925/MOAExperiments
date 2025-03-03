@@ -88,7 +88,7 @@ function one_solve(N, Q1, Q2, fout; log=true, heur=true, preproc=0 )
     set_optimizer(model, () -> MOA.Optimizer(Gurobi.Optimizer))
 
     set_attribute(model, MOA.Algorithm(), MOA.MultiObjectiveBranchBound())
-    set_attribute(model, MOA.LowerBoundsLimit(), 5)
+    set_attribute(model, MOA.LowerBoundsLimit(), 3)
     set_attribute(model, MOA.ConvexQCR(), true)
     set_attribute(model, MOA.Heuristic(), heur)
     set_attribute(model, MOA.Preproc(), preproc)
@@ -141,7 +141,7 @@ function warmup()
 
     Q2 = [0.0 41.0 47.0 39.0 0.0 39.0 36.0 42.0 0.0 48.0; 0.0 0.0 14.0 3.0 0.0 4.0 10.0 13.0 14.0 2.0; 0.0 0.0 0.0 1.0 47.0 48.0 16.0 8.0 48.0 3.0; 0.0 0.0 0.0 0.0 8.0 1.0 5.0 1.0 16.0 45.0; 0.0 0.0 0.0 0.0 0.0 26.0 1.0 44.0 44.0 43.0; 0.0 0.0 0.0 0.0 0.0 0.0 4.0 1.0 2.0 5.0; 0.0 0.0 0.0 0.0 0.0 0.0 0.0 47.0 3.0 0.0; 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 44.0; 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 11.0; 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0]
     fout = open("warmup.log", "w")
-    one_solve(n, Q1, Q2, fout,  heur=false, preproc=0)
+    one_solve(n, Q1, Q2, fout,  heur=false, preproc=1)
     close(fout)
     println("end of warming up ...\n\n")
 end
