@@ -5,73 +5,6 @@ import .MultiObjectiveAlgorithms as MOA
 
 
 
-"""
-format u v w_uv
-"""
-function readFormat1(fname)
-    f = open(fname)
-
-    line = readline(f)
-
-    n = parse(Int64, split(line, " ")[1] ) ; l = parse(Int64, split(line, " ")[2] ) 
-    W = zeros(n, n)
-
-    for i in 1:l
-        line = readline(f)
-        v = split(line, " ")
-
-        i = parse(Int64, v[1]) ; j = parse(Int64, v[2] ) 
-        w = parse(Float64, v[3] ) 
-        W[i,j] = w
-
-        # println("W[$i, $j] = $w")
-    end
-
-    close(f)
-
-    # for i in 1:n
-    #     for j in 1:n
-    #         if i==j continue end 
-    #         if W[i,j] != 0.0 && W[j,i] != W[i, j]
-    #             error("directed edges !! W[$i, $j] = $(W[i, j]) and W[$j, $i] = $(W[j, i])")
-    #         end
-    #     end
-        
-    # end
-    return n, W
-end
-
-"""
-w,w,w,w ...
-w,w,w,w ...
-"""
-function readFormat2(fname)
-    N = 0; W= []; col = 0
-    f = open(fname)
-
-    for line in readlines(f)
-        N += 1
-
-        if col == 0 
-            col = length(split(line, ","))
-        elseif col != length(split(line, ","))
-            error("line $N, col = ", length(split(line, ",")))
-        end
-
-        push!(W, parse.(Float64, split(line, ",")) )
-    end
-    close(f)
-
-    Mat = reduce(vcat,transpose.(W))
-
-    return N, Mat
-end
-
-
-
-
-
-
 
 function one_solve(N, Q1, Q2, fout; log=true, heur=true, preproc=0 )
 
@@ -155,28 +88,10 @@ function run(fname)
         mkdir(folder)
     end
 
-
-    
-    N, Q1 = nothing, nothing
-
-    if split(fname, "/")[end-1] == "instances_neg"
-        N, Q1 = readFormat1(fname)
-
-    elseif split(fname, "/")[end-1] == "instances_neqfloat"
-        N, Q1 = readFormat2(fname)
-
-    elseif split(fname, "/")[end-1] == "instances_uni"
-        N, Q1 = readFormat2(fname)
-        
-    else
-        error("Unkown input file $fname ...")
-    end
-
-
-    include("../Q2/" * fname)
+    include("../instances/" * split(fname, "/")[end])
 
     fout = open(folder * split(fname, "/")[end] , "w")
-    one_solve(N, Q1, Q2, fout, heur=false, preproc=1)
+    one_solve(n, Q1, Q2, fout, heur=false, preproc=1)
     close(fout)
 
 end
@@ -192,12 +107,12 @@ Q2 = [0.0 41.0 47.0 39.0 0.0 39.0 36.0 42.0 0.0 48.0; 0.0 0.0 14.0 3.0 0.0 4.0 1
 warmup(Q1, Q2, n)
 
 
-Q1 = [0 27 28 49 24 23 15 20 10 33; 0 0 50 15 36 46 42 14 27 44; 0 0 0 31 12 24 27 8 21 49; 0 0 0 0 5 41 19 18 28 30; 0 0 0 0 0 14 11 40 36 18; 0 0 0 0 0 0 31 48 9 25; 0 0 0 0 0 0 0 10 13 49; 0 0 0 0 0 0 0 0 49 6; 0 0 0 0 0 0 0 0 0 40; 0 0 0 0 0 0 0 0 0 0]
-Q2 = [0.0 17.0 2.0 0.0 29.0 32.0 48.0 44.0 48.0 2.0; 0.0 0.0 0.0 43.0 10.0 2.0 7.0 37.0 14.0 0.0; 0.0 0.0 0.0 5.0 38.0 31.0 20.0 45.0 39.0 1.0; 0.0 0.0 0.0 0.0 47.0 9.0 35.0 47.0 5.0 6.0; 0.0 0.0 0.0 0.0 0.0 36.0 47.0 6.0 13.0 39.0; 0.0 0.0 0.0 0.0 0.0 0.0 4.0 1.0 50.0 19.0; 0.0 0.0 0.0 0.0 0.0 0.0 0.0 40.0 44.0 1.0; 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 45.0; 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 2.0; 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0]
+# Q1 = [0 27 28 49 24 23 15 20 10 33; 0 0 50 15 36 46 42 14 27 44; 0 0 0 31 12 24 27 8 21 49; 0 0 0 0 5 41 19 18 28 30; 0 0 0 0 0 14 11 40 36 18; 0 0 0 0 0 0 31 48 9 25; 0 0 0 0 0 0 0 10 13 49; 0 0 0 0 0 0 0 0 49 6; 0 0 0 0 0 0 0 0 0 40; 0 0 0 0 0 0 0 0 0 0]
+# Q2 = [0.0 17.0 2.0 0.0 29.0 32.0 48.0 44.0 48.0 2.0; 0.0 0.0 0.0 43.0 10.0 2.0 7.0 37.0 14.0 0.0; 0.0 0.0 0.0 5.0 38.0 31.0 20.0 45.0 39.0 1.0; 0.0 0.0 0.0 0.0 47.0 9.0 35.0 47.0 5.0 6.0; 0.0 0.0 0.0 0.0 0.0 36.0 47.0 6.0 13.0 39.0; 0.0 0.0 0.0 0.0 0.0 0.0 4.0 1.0 50.0 19.0; 0.0 0.0 0.0 0.0 0.0 0.0 0.0 40.0 44.0 1.0; 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 45.0; 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 2.0; 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0]
 
-warmup(Q1, Q2, n)
-
-
+# warmup(Q1, Q2, n)
 
 
-# run(ARGS[1])
+
+
+run(ARGS[1])
