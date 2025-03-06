@@ -78,12 +78,12 @@ end
 
 function run(fname)
     println("hello ", fname)
-    folder = "./res/"
+    folder = "../res/"
     if !isdir(folder)
         mkdir(folder)
     end
 
-    folder = "./res/MOBB_uqcr/"
+    folder = "../res/MOBB_uqcr/"
     if !isdir(folder)
         mkdir(folder)
     end
@@ -93,6 +93,18 @@ function run(fname)
     fout = open(folder * split(fname, "/")[end] , "w")
     one_solve(n, Q1, Q2, fout, heur=false, preproc=1)
     close(fout)
+
+
+    # folder = "../res/MOBB_heur_uqcr/"
+    # if !isdir(folder)
+    #     mkdir(folder)
+    # end
+
+    # include("../instances/" * split(fname, "/")[end])
+
+    # fout = open(folder * split(fname, "/")[end] , "w")
+    # one_solve(n, Q1, Q2, fout, heur=true, preproc=1)
+    # close(fout)
 
 end
 

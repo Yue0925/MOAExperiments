@@ -10,7 +10,7 @@ import .MultiObjectiveAlgorithms as MOA
 function one_solve(N, Q1, Q2, fout; log=true)
 
     model = Model()
-    set_silent(model)
+    # set_silent(model)
 
     @variable(model, x[1:N], Bin)
 
@@ -67,7 +67,7 @@ function run(fname)
     if !isdir(folder)
         mkdir(folder)
     end
-    folder = "./res/epsilon/"
+    folder = "../res/epsilon/"
     if !isdir(folder)
         mkdir(folder)
     end

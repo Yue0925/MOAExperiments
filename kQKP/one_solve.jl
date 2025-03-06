@@ -21,13 +21,13 @@ function one_solve(fname, fout; log=true, algo_bb =false, algo_eps=false, heur=f
 
     if algo_bb
         set_attribute(model, MOA.Algorithm(), MOA.MultiObjectiveBranchBound())
-        set_attribute(model, MOA.LowerBoundsLimit(), 5)
+        set_attribute(model, MOA.LowerBoundsLimit(), 3)
         set_attribute(model, MOA.ConvexQCR(), true)
         set_attribute(model, MOA.Heuristic(), heur)
         set_attribute(model, MOA.Preproc(), preproc)
 
         log ? println(fout, "heur = ", heur) : nothing
-        log ? println(fout, "LBS_limit = ", 5) : nothing
+        log ? println(fout, "LBS_limit = ", 3) : nothing
         log ? println(fout, "preproc = ", preproc) : nothing
 
     elseif algo_eps
@@ -84,10 +84,10 @@ end
 
 function run(fname, method)
     inst = split(fname, "/")[end]
-    n = parse(Int64, split(inst, "_")[2])
-    if n!=20 && n!=25
-        return
-    end
+    # n = parse(Int64, split(inst, "_")[2])
+    # if n!=20 && n!=25
+    #     return
+    # end
 
     folder = "./res"
     if !isdir(folder)
@@ -112,6 +112,17 @@ function run(fname, method)
 
     end
 
+    if method == "bb"
+        folder = "./res/Gurobi/bb"
+        if !isdir(folder)
+            mkdir(folder)
+        end
+
+        logname = folder * "/" *inst 
+        fout = open(logname, "w")
+        one_solve(fname, fout, algo_bb = true, heur=false)
+        close(fout)
+    end
 
     if method == "bb_heur"
         folder = "./res/Gurobi/bb_heur"
@@ -134,6 +145,42 @@ function run(fname, method)
         logname = folder * "/" *inst 
         fout = open(logname, "w")
         one_solve(fname, fout, algo_bb = true, heur=true, preproc=1)
+        close(fout)
+    end
+
+    if method == "bb_preproc1"
+        folder = "./res/Gurobi/bb_preproc1"
+        if !isdir(folder)
+            mkdir(folder)
+        end
+
+        logname = folder * "/" *inst 
+        fout = open(logname, "w")
+        one_solve(fname, fout, algo_bb = true, heur=false, preproc=1)
+        close(fout)
+    end
+
+    if method == "bb_heur_preproc2"
+        folder = "./res/Gurobi/bb_heur_preproc2"
+        if !isdir(folder)
+            mkdir(folder)
+        end
+
+        logname = folder * "/" *inst 
+        fout = open(logname, "w")
+        one_solve(fname, fout, algo_bb = true, heur=true, preproc=2)
+        close(fout)
+    end
+
+    if method == "bb_preproc2"
+        folder = "./res/Gurobi/bb_preproc2"
+        if !isdir(folder)
+            mkdir(folder)
+        end
+
+        logname = folder * "/" *inst 
+        fout = open(logname, "w")
+        one_solve(fname, fout, algo_bb = true, heur=false, preproc=2)
         close(fout)
     end
 
