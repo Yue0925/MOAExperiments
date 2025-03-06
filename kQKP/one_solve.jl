@@ -84,10 +84,10 @@ end
 
 function run(fname, method)
     inst = split(fname, "/")[end]
-    # n = parse(Int64, split(inst, "_")[2])
-    # if n!=20 && n!=25
-    #     return
-    # end
+    n = parse(Int64, split(inst, "_")[2])
+    if n>=40
+        return
+    end
 
     folder = "./res"
     if !isdir(folder)
