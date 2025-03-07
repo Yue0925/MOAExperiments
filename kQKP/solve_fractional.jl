@@ -87,7 +87,7 @@ end
 function run(fname, method)
     inst = split(fname, "/")[end]
     n = parse(Int64, split(inst, "_")[2])
-    if n>=40
+    if n<40
         return
     end
 

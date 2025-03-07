@@ -1,7 +1,7 @@
 heur = false
 LBS_limit = 3
 preproc = 1
-total_time = 9.16
+total_time = 0.27
 NDP = 11
 total_nodes = 69
 pruned_nodes = 35
