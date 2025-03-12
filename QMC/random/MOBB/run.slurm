@@ -14,7 +14,6 @@
 module load /softs/modules/gurobi/1200
 
 
-for file in ../instances/*; do
-    echo "$file ... "
-    srun julia one_solve.jl "$file"
-done
+
+srun julia one_solve.jl
+

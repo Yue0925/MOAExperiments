@@ -71,32 +71,8 @@ end
 
 
 
-function tab_fractional(fname)
-    fout = open("result_fractional.tab", "a")
-    inst = split(fname, "/")[end]
-
-    n = split(inst, "_")[2]
-    d = split(inst, "_")[end]
-
-    print(fout, inst, " & ", n, " & ", d, " & ")
-
-    epsilon("./resFractional/Gurobi/epsilon/" * inst, fout)
-
-    bb_heur_preproc("./resFractional/Gurobi/bb_heur_preproc1/" * inst, fout)
-
-    println(fout, "\\\\")
-
-    close(fout)
-end
-
-
-tab_fractional(ARGS[1])
-
-
-
-
-# function run(fname)
-#     fout = open("result.tab", "a")
+# function tab_fractional(fname)
+#     fout = open("result_fractional.tab", "a")
 #     inst = split(fname, "/")[end]
 
 #     n = split(inst, "_")[2]
@@ -104,20 +80,44 @@ tab_fractional(ARGS[1])
 
 #     print(fout, inst, " & ", n, " & ", d, " & ")
 
-#     epsilon("./res/Gurobi/epsilon/" * inst, fout)
+#     epsilon("./resFractional/Gurobi/epsilon/" * inst, fout)
 
-#     # bb_heur("./res/Gurobi/bb_heur/" * inst, fout)
-#     bb_heur_preproc("./res/Gurobi/bb_heur_preproc1/" * inst, fout)
-
-#     bb_heur_preproc("./res/Gurobi/bb_heur_preproc2/" * inst, fout)
-
-#     bb_preproc("./res/Gurobi/bb_preproc1/" * inst, fout)
-
-#     bb_preproc("./res/Gurobi/bb_preproc2/" * inst, fout)
+#     bb_preproc("./resFractional/Gurobi/bb_preproc1/" * inst, fout)
 
 #     println(fout, "\\\\")
 
 #     close(fout)
 # end
 
-# run(ARGS[1])
+
+# tab_fractional(ARGS[1])
+
+
+
+
+function run(fname)
+    fout = open("result.tab", "a")
+    inst = split(fname, "/")[end]
+
+    n = split(inst, "_")[2]
+    d = split(inst, "_")[end]
+
+    print(fout, inst, " & ", n, " & ", d, " & ")
+
+    epsilon("./res/Gurobi/epsilon/" * inst, fout)
+
+    # bb_heur("./res/Gurobi/bb_heur/" * inst, fout)
+    bb_heur_preproc("./res/Gurobi/bb_heur_preproc1/" * inst, fout)
+
+    bb_heur_preproc("./res/Gurobi/bb_heur_preproc2/" * inst, fout)
+
+    bb_preproc("./res/Gurobi/bb_preproc1/" * inst, fout)
+
+    bb_preproc("./res/Gurobi/bb_preproc2/" * inst, fout)
+
+    println(fout, "\\\\")
+
+    close(fout)
+end
+
+run(ARGS[1])

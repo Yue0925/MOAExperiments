@@ -6,9 +6,6 @@ function colpmeleQ2()
     for file in readdir(folder)
         include(folder * file)
 
-        if parse(Int64, split(file, "_")[2]) < 30
-            continue
-        end
         println(file * "...")
 
         fout = open(folder * file, "a")
@@ -63,6 +60,8 @@ function colpmeleQ2()
 
         println(fout, "Q2=$Q2")
         close(fout)
+
+        mv(folder * file, folder * file * "_3")
     end
 end
 

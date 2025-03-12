@@ -1,0 +1,9 @@
+heur = false
+LBS_limit = 3
+preproc = 1
+total_time = 0.31
+NDP = 7
+total_nodes = 57
+pruned_nodes = 29
+heur_time = 0.0
+Y_N = Any[[126.95, 116.32], [95.25, 190.88], [91.71, 191.74], [81.25, 198.81], [71.98, 211.24], [6.74, 282.63], [-0.0, 287.1]]

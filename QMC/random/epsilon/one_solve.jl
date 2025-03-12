@@ -25,7 +25,8 @@ function one_solve(N, Q1, Q2, fout; log=true)
     set_attribute(model, MOA.Algorithm(), MOA.EpsilonConstraint())
     set_attribute(model, MOA.EpsilonConstraintStep(), 0.01)
 
-   
+    set_time_limit_sec(model, 1800.0)
+
 
     optimize!(model)
     # solution_summary(model)
@@ -62,8 +63,8 @@ end
 
 
 function run(fname)
-    println("hello ", fname)
-    folder = "./res/"
+    println("reading  ", fname)
+    folder = "../res/"
     if !isdir(folder)
         mkdir(folder)
     end
@@ -95,4 +96,13 @@ warmup(Q1, Q2, n)
 
 
 
-run(ARGS[1])
+
+folder = "../instances/"
+for file in readdir(folder)
+    println("\n\nsolving ", folder * file, "    with epsilon method")
+    run(folder * file)
+end
+
+
+
+

@@ -4,7 +4,9 @@ import .MultiObjectiveAlgorithms as MOA
 
 
 
-function one_solve(fname, fout; log=true, algo_bb =false, algo_eps=false, heur=false, preproc=0)
+function one_solve(fname, fout; log=true, algo_bb =false, algo_eps=false, 
+                                heur=false, preproc=0, tight_root=0
+        )
     include(fname)
 
     model = Model()
@@ -25,10 +27,13 @@ function one_solve(fname, fout; log=true, algo_bb =false, algo_eps=false, heur=f
         set_attribute(model, MOA.ConvexQCR(), true)
         set_attribute(model, MOA.Heuristic(), heur)
         set_attribute(model, MOA.Preproc(), preproc)
+        set_attribute(model, MOA.TightRoot(), tight_root)
+        set_attribute(model, MOA.TraverseOrder(), Symbol("dfs"))
 
         log ? println(fout, "heur = ", heur) : nothing
         log ? println(fout, "LBS_limit = ", 3) : nothing
         log ? println(fout, "preproc = ", preproc) : nothing
+        log ? println(fout, "tight_root = ", tight_root) : nothing
 
     elseif algo_eps
         set_attribute(model, MOA.Algorithm(), MOA.EpsilonConstraint())
@@ -39,6 +44,7 @@ function one_solve(fname, fout; log=true, algo_bb =false, algo_eps=false, heur=f
         return []
     end
 
+    set_time_limit_sec(model, 1800.0)
 
     optimize!(model)
     # solution_summary(model)
@@ -85,9 +91,6 @@ end
 function run(fname, method)
     inst = split(fname, "/")[end]
     n = parse(Int64, split(inst, "_")[2])
-    if n>=40
-        return
-    end
 
     folder = "./res"
     if !isdir(folder)
@@ -185,11 +188,40 @@ function run(fname, method)
     end
 
 
+    if method == "bb_preproc1_tightroot1"
+        folder = "./res/Gurobi/bb_preproc1_tightroot1"
+        if !isdir(folder)
+            mkdir(folder)
+        end
+
+        logname = folder * "/" *inst 
+        fout = open(logname, "w")
+        one_solve(fname, fout, algo_bb = true, heur=false, preproc=1, tight_root=1)
+        close(fout)
+    end
+
+    if method == "bb_preproc2_tightroot1"
+        folder = "./res/Gurobi/bb_preproc2_tightroot1"
+        if !isdir(folder)
+            mkdir(folder)
+        end
+
+        logname = folder * "/" *inst 
+        fout = open(logname, "w")
+        one_solve(fname, fout, algo_bb = true, heur=false, preproc=2, tight_root=1)
+        close(fout)
+    end
 end
 
-# fname = "./instances/QKP_10_100_75"
+
 
 println("warm up ...")
 warm_up()
-println("\n\nsolving ", ARGS[1], "\t with \t ", ARGS[2])
-run(ARGS[1], ARGS[2])
+
+
+
+folder = "./instances/"
+for file in readdir(folder)
+    println("\n\nsolving ", folder * file, "    with ",  ARGS[1])
+    run(folder * file, ARGS[1])
+end

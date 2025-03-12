@@ -6,7 +6,7 @@ import .MultiObjectiveAlgorithms as MOA
 
 
 
-function one_solve(N, Q1, Q2, fout; log=true, heur=true, preproc=0 )
+function one_solve(N, Q1, Q2, fout; log=true, heur=false, preproc=0, tight_root=0)
 
     model = Model()
     set_silent(model)
@@ -25,12 +25,16 @@ function one_solve(N, Q1, Q2, fout; log=true, heur=true, preproc=0 )
     set_attribute(model, MOA.ConvexQCR(), true)
     set_attribute(model, MOA.Heuristic(), heur)
     set_attribute(model, MOA.Preproc(), preproc)
+    set_attribute(model, MOA.TightRoot(), tight_root)
+    set_attribute(model, MOA.TraverseOrder(), Symbol("dfs"))
 
     log ? println(fout, "heur = ", heur) : nothing
     log ? println(fout, "LBS_limit = ", 3) : nothing
     log ? println(fout, "preproc = ", preproc) : nothing
+    log ? println(fout, "tight_root = ", tight_root) : nothing
 
 
+    set_time_limit_sec(model, 1800.0)
 
     optimize!(model)
     # solution_summary(model)
@@ -83,7 +87,7 @@ function run(fname)
         mkdir(folder)
     end
 
-    folder = "../res/MOBB_uqcr/"
+    folder = "../res/bb_preproc1/"
     if !isdir(folder)
         mkdir(folder)
     end
@@ -92,6 +96,21 @@ function run(fname)
 
     fout = open(folder * split(fname, "/")[end] , "w")
     one_solve(n, Q1, Q2, fout, heur=false, preproc=1)
+    close(fout)
+
+
+
+
+
+    folder = "../res/bb_preproc1_tightroot1/"
+    if !isdir(folder)
+        mkdir(folder)
+    end
+
+    include("../instances/" * split(fname, "/")[end])
+
+    fout = open(folder * split(fname, "/")[end] , "w")
+    one_solve(n, Q1, Q2, fout, heur=false, preproc=1, tight_root=1)
     close(fout)
 
 
@@ -127,4 +146,11 @@ warmup(Q1, Q2, n)
 
 
 
-run(ARGS[1])
+
+folder = "../instances/"
+for file in readdir(folder)
+    println("\n\nreading ", folder * file)
+    run(folder * file)
+end
+
+

@@ -34,7 +34,7 @@ function one_solve(fname, fout; log=true, algo_bb =false, algo_eps=false, heur=f
 
     elseif algo_eps
         set_attribute(model, MOA.Algorithm(), MOA.EpsilonConstraint())
-        set_attribute(model, MOA.EpsilonConstraintStep(), 1.0e-5)
+        set_attribute(model, MOA.EpsilonConstraintStep(), 1.0e-3)
 
     else
         @error("unknown algo parameter " )
@@ -87,9 +87,9 @@ end
 function run(fname, method)
     inst = split(fname, "/")[end]
     n = parse(Int64, split(inst, "_")[2])
-    if n<40
-        return
-    end
+    # if n<40
+    #     return
+    # end
 
     folder = "./resFractional"
     if !isdir(folder)
