@@ -32,11 +32,11 @@ function bb_preproc(fname, fout)
     end
 
     if failed
-        print(fout, " & & & & ")
+        print(fout, " & & & & & ")
     else
         include(fname)
         print(fout, total_time, " & ", total_nodes, " & ", 
-                pruned_nodes, " & ", NDP, " & "
+                pruned_nodes, " & ", pruned_dominance_nodes, " & ", NDP, " & "
         )
     end 
 
@@ -56,11 +56,11 @@ function bb_heur_preproc(fname, fout)
     end
 
     if failed
-        print(fout, " & & & & & ")
+        print(fout, " & & & & & & ")
     else
         include(fname)
         print(fout, heur_time, " & ", total_time, " & ", total_nodes, " & ", 
-                pruned_nodes, " & ", NDP, " & "
+                pruned_nodes, " & ", pruned_dominance_nodes, " & ",  NDP, " & "
         )
     end 
 
@@ -106,14 +106,17 @@ function run(fname)
 
     epsilon("./res/Gurobi/epsilon/" * inst, fout)
 
-    # bb_heur("./res/Gurobi/bb_heur/" * inst, fout)
+    bb_preproc("./res/Gurobi/bb_preproc1/" * inst, fout)
+
     bb_heur_preproc("./res/Gurobi/bb_heur_preproc1/" * inst, fout)
+
+    bb_preproc("./res/Gurobi/bb_preproc2/" * inst, fout)
 
     bb_heur_preproc("./res/Gurobi/bb_heur_preproc2/" * inst, fout)
 
-    bb_preproc("./res/Gurobi/bb_preproc1/" * inst, fout)
+    bb_heur_preproc("./res/Gurobi/bb_preproc1_tightroot1/" * inst, fout)
+    bb_heur_preproc("./res/Gurobi/bb_preproc2_tightroot1/" * inst, fout)
 
-    bb_preproc("./res/Gurobi/bb_preproc2/" * inst, fout)
 
     println(fout, "\\\\")
 
