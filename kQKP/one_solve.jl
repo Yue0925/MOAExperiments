@@ -5,7 +5,7 @@ import .MultiObjectiveAlgorithms as MOA
 
 
 function one_solve(fname, fout; log=true, algo_bb =false, algo_eps=false, 
-                                heur=false, preproc=0, tight_root=0
+                                heur=false, preproc=-1, tight_root=0
         )
     include(fname)
 
@@ -86,7 +86,7 @@ end
 function warm_up()
     one_solve("./warmup/QKP_5_100_75", nothing, log = false, algo_eps=true )
 
-    one_solve("./warmup/QKP_5_100_75", nothing, log = false, algo_bb = true, heur=true, preproc=1 )
+    one_solve("./warmup/QKP_5_100_75", nothing, log = false, algo_bb = true, heur=true, preproc=2 , tight_root=1 ) # 
 end
 
 
@@ -159,6 +159,20 @@ function run(fname, method)
 
         fout = open(logname, "w")
         one_solve(fname, fout, algo_bb = true, heur=true, preproc=1)
+        close(fout)
+    end
+
+    if method == "bb_preproc0"
+        folder = "./res/Gurobi/bb_preproc0"
+        if !isdir(folder)
+            mkdir(folder)
+        end
+
+        logname = folder * "/" *inst 
+        if isfile(logname) return end 
+
+        fout = open(logname, "w")
+        one_solve(fname, fout, algo_bb = true, heur=false, preproc=0)
         close(fout)
     end
 
@@ -238,8 +252,8 @@ end
 
 
 function one_solveTO(fname, fout; log=true, algo_bb =false, algo_eps=false, 
-    heur=false, preproc=0, tight_root=0
-)
+                                    heur=false, preproc=-1, tight_root=0
+    )
     include(fname)
 
     model = Model()
@@ -389,6 +403,20 @@ function run3(fname, method)
         close(fout)
     end
 
+    if method == "bb_preproc0"
+        folder = "./TOres/Gurobi/bb_preproc0"
+        if !isdir(folder)
+            mkdir(folder)
+        end
+
+        logname = folder * "/" *inst 
+        if isfile(logname) return end 
+
+        fout = open(logname, "w")
+        one_solveTO(fname, fout, algo_bb = true, heur=false, preproc=0)
+        close(fout)
+    end
+
     if method == "bb_preproc1"
         folder = "./TOres/Gurobi/bb_preproc1"
         if !isdir(folder)
@@ -469,7 +497,7 @@ warm_up()
 
 println("\n\nsolving ", ARGS[1] , "    with ",  ARGS[2])
 
-run( ARGS[1], ARGS[2])
+# run( ARGS[1], ARGS[2])
 
 
-# run3( ARGS[1], ARGS[2])
+run3( ARGS[1], ARGS[2])

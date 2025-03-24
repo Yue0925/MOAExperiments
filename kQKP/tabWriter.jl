@@ -35,7 +35,7 @@ function bb_preproc(fname, fout)
         print(fout, " & & & & & ")
     else
         include(fname)
-        print(fout, total_time, " & ", total_nodes, " & ", 
+        print(fout, total_time>= 1800.0 ? "TO" : total_time, " & ", total_nodes, " & ", 
                 pruned_nodes, " & ", pruned_dominance_nodes, " & ", NDP, " & "
         )
     end 
@@ -59,7 +59,7 @@ function bb_heur_preproc(fname, fout)
         print(fout, " & & & & & & ")
     else
         include(fname)
-        print(fout, heur_time, " & ", total_time, " & ", total_nodes, " & ", 
+        print(fout, heur_time, " & ", total_time>= 1800.0 ? "TO" : total_time , " & ", total_nodes, " & ", 
                 pruned_nodes, " & ", pruned_dominance_nodes, " & ",  NDP, " & "
         )
     end 
@@ -71,26 +71,33 @@ end
 
 
 
-# function tab_fractional(fname)
-#     fout = open("result_fractional.tab", "a")
-#     inst = split(fname, "/")[end]
+function tab_fractional(fname)
+    fout = open("result_fractional.tab", "a")
+    inst = split(fname, "/")[end]
 
-#     n = split(inst, "_")[2]
-#     d = split(inst, "_")[end]
+    n = split(inst, "_")[2]
+    d = split(inst, "_")[end-1]
 
-#     print(fout, inst, " & ", n, " & ", d, " & ")
+    print(fout, inst, " & ", n, " & ", d, " & ")
 
-#     epsilon("./resFractional/Gurobi/epsilon/" * inst, fout)
+    bb_preproc("./TOres/Gurobi/bb_preproc0/" * inst, fout)
 
-#     bb_preproc("./resFractional/Gurobi/bb_preproc1/" * inst, fout)
-
-#     println(fout, "\\\\")
-
-#     close(fout)
-# end
+    bb_preproc("./TOres/Gurobi/bb_preproc1/" * inst, fout)
 
 
-# tab_fractional(ARGS[1])
+    bb_heur_preproc("./TOres/Gurobi/bb_heur_preproc1/" * inst, fout)
+
+
+    bb_heur_preproc("./TOres/Gurobi/bb_preproc1_tightroot1/" * inst, fout)
+
+
+    println(fout, "\\\\")
+
+    close(fout)
+end
+
+
+tab_fractional(ARGS[1])
 
 
 
@@ -100,21 +107,24 @@ function run(fname)
     inst = split(fname, "/")[end]
 
     n = split(inst, "_")[2]
-    d = split(inst, "_")[end]
+    d = split(inst, "_")[end-1]
 
     print(fout, inst, " & ", n, " & ", d, " & ")
 
     epsilon("./res/Gurobi/epsilon/" * inst, fout)
 
+    bb_preproc("./res/Gurobi/bb_preproc0/" * inst, fout)
+
     bb_preproc("./res/Gurobi/bb_preproc1/" * inst, fout)
 
     bb_heur_preproc("./res/Gurobi/bb_heur_preproc1/" * inst, fout)
+
+    bb_heur_preproc("./res/Gurobi/bb_preproc1_tightroot1/" * inst, fout)
 
     bb_preproc("./res/Gurobi/bb_preproc2/" * inst, fout)
 
     bb_heur_preproc("./res/Gurobi/bb_heur_preproc2/" * inst, fout)
 
-    bb_heur_preproc("./res/Gurobi/bb_preproc1_tightroot1/" * inst, fout)
     bb_heur_preproc("./res/Gurobi/bb_preproc2_tightroot1/" * inst, fout)
 
 

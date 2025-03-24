@@ -9,7 +9,7 @@ for file in readdir(folder)
 
     Random.seed!(n + density +100 )
 
-    Q = Q1 .+ Q2
+    Q = (Q1 .+ Q2)
 
     Q3 = zeros(Int64, n, n) ; maxi = maximum(Q) ; mini = minimum(Q)
 

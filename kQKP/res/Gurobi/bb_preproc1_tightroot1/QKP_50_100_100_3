@@ -1,0 +1,11 @@
+heur = false
+LBS_limit = 3
+preproc = 1
+tight_root = 1
+total_time = 40.64
+NDP = 0
+total_nodes = 1
+pruned_nodes = 1
+pruned_dominance_nodes = 0
+heur_time = 0.0
+Y_N = Any[]
