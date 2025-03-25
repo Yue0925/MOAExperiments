@@ -6,7 +6,8 @@ import .MultiObjectiveAlgorithms as MOA
 
 
 
-function one_solve(N, Q1, Q2, fout; log=true, heur=false, preproc=0, tight_root=0)
+function one_solve(N, Q1, Q2, fout; log=true, heur=false, preproc=-1, tight_root=0
+    )
 
     model = Model()
     set_silent(model)
@@ -46,7 +47,7 @@ function one_solve(N, Q1, Q2, fout; log=true, heur=false, preproc=0, tight_root=
     log ? println(fout, "NDP = ", result_count(model)) : nothing
 
     for i in 1:nb_sol
-        @assert is_solved_and_feasible(model; result = i)
+        # @assert is_solved_and_feasible(model; result = i)
         println(objective_value(model; result = i) )
         push!(sols, objective_value(model; result = i))
         println("sol: ", value.(x ; result = i))
@@ -56,11 +57,14 @@ function one_solve(N, Q1, Q2, fout; log=true, heur=false, preproc=0, tight_root=
     println("total nodes: ",  node_count(model) )
 
     println("pruned nodes: ", get_attribute(model, MOA.PrunedNodeCount()) )
-    
+    println("pruned dominance nodes: ", get_attribute(model, MOA.PrunedDominanceNodeCount()) )
+
     println("heuristic time ", get_attribute(model, MOA.HeuristicTime()) )
 
     log ? println(fout, "total_nodes = ", node_count(model)) : nothing
     log ? println(fout, "pruned_nodes = ", get_attribute(model, MOA.PrunedNodeCount())) : nothing
+    log ? println(fout, "pruned_dominance_nodes = ", get_attribute(model, MOA.PrunedDominanceNodeCount())) : nothing
+
     log ? println(fout, "heur_time = ", round(get_attribute(model, MOA.HeuristicTime()) , digits = 2)) : nothing
 
     log ? println(fout, "Y_N = ", sols) : nothing
@@ -74,56 +78,154 @@ function warmup(Q1, Q2, n)
     println("warming up with instance size of 10 ... ")
 
     fout = open("warmup.log", "w")
-    one_solve(n, Q1, Q2, fout,  heur=false, preproc=1)
+    one_solve(n, Q1, Q2, fout,  heur=false, preproc=2 , tight_root=1)
     close(fout)
     println("end of warming up ...\n\n")
 end
 
 
-function run(fname)
+function run(fname, method)
     println("hello ", fname)
     folder = "../res/"
     if !isdir(folder)
         mkdir(folder)
     end
 
-    folder = "../res/bb_preproc1/"
-    if !isdir(folder)
-        mkdir(folder)
+    if method == "bb_preproc1"
+        folder = "../res/bb_preproc1/"
+        if !isdir(folder)
+            mkdir(folder)
+        end
+
+        include("../instances/" * split(fname, "/")[end])
+
+        logname  = folder * split(fname, "/")[end]
+        if isfile(logname) return end 
+        fout = open(logname, "w")
+
+        one_solve(n, Q1, Q2, fout, heur=false, preproc=1)
+        close(fout)
+
     end
 
-    include("../instances/" * split(fname, "/")[end])
+    if method == "bb_preproc0"
+        folder = "../res/bb_preproc0/"
+        if !isdir(folder)
+            mkdir(folder)
+        end
 
-    fout = open(folder * split(fname, "/")[end] , "w")
-    one_solve(n, Q1, Q2, fout, heur=false, preproc=1)
-    close(fout)
+        include("../instances/" * split(fname, "/")[end])
+        logname  = folder * split(fname, "/")[end]
+        if isfile(logname) return end 
+        fout = open(logname, "w")
 
-
-
-
-
-    folder = "../res/bb_preproc1_tightroot1/"
-    if !isdir(folder)
-        mkdir(folder)
+        one_solve(n, Q1, Q2, fout, heur=false, preproc=0)
+        close(fout)
     end
 
-    include("../instances/" * split(fname, "/")[end])
 
-    fout = open(folder * split(fname, "/")[end] , "w")
-    one_solve(n, Q1, Q2, fout, heur=false, preproc=1, tight_root=1)
-    close(fout)
+    if method == "bb_heur_preproc1"
+        folder = "../res/bb_heur_preproc1/"
+        if !isdir(folder)
+            mkdir(folder)
+        end
+
+        include("../instances/" * split(fname, "/")[end])
+
+        logname  = folder * split(fname, "/")[end]
+        if isfile(logname) return end 
+        fout = open(logname, "w")
+
+        one_solve(n, Q1, Q2, fout, heur=true, preproc=1)
+        close(fout)
+    end
+
+    if method == "bb_preproc2"
+        folder = "../res/bb_preproc2/"
+        if !isdir(folder)
+            mkdir(folder)
+        end
+
+        include("../instances/" * split(fname, "/")[end])
+
+        logname  = folder * split(fname, "/")[end]
+        if isfile(logname) return end 
+        fout = open(logname, "w")
 
 
-    # folder = "../res/MOBB_heur_uqcr/"
-    # if !isdir(folder)
-    #     mkdir(folder)
-    # end
+        if isfile(logname) return end 
+        fout = open(logname, "w")
 
-    # include("../instances/" * split(fname, "/")[end])
 
-    # fout = open(folder * split(fname, "/")[end] , "w")
-    # one_solve(n, Q1, Q2, fout, heur=true, preproc=1)
-    # close(fout)
+        one_solve(n, Q1, Q2, fout, heur=false, preproc=2)
+        close(fout)
+
+    end
+
+    if method == "bb_heur_preproc2"
+        folder = "../res/bb_heur_preproc2/"
+        if !isdir(folder)
+            mkdir(folder)
+        end
+
+        include("../instances/" * split(fname, "/")[end])
+
+        logname  = folder * split(fname, "/")[end]
+        if isfile(logname) return end 
+        fout = open(logname, "w")
+
+
+        if isfile(logname) return end 
+        fout = open(logname, "w")
+
+
+        one_solve(n, Q1, Q2, fout, heur=true, preproc=2)
+        close(fout)
+    end
+
+    if method == "bb_preproc1_tightroot1"
+        folder = "../res/bb_preproc1_tightroot1/"
+        if !isdir(folder)
+            mkdir(folder)
+        end
+
+        include("../instances/" * split(fname, "/")[end])
+
+        logname  = folder * split(fname, "/")[end]
+        if isfile(logname) return end 
+        fout = open(logname, "w")
+
+
+        if isfile(logname) return end 
+        fout = open(logname, "w")
+
+        one_solve(n, Q1, Q2, fout, heur=false, preproc=1, tight_root=1)
+        close(fout)
+
+    end
+
+
+    if method == "bb_preproc2_tightroot1"
+        folder = "../res/bb_preproc2_tightroot1/"
+        if !isdir(folder)
+            mkdir(folder)
+        end
+
+        include("../instances/" * split(fname, "/")[end])
+
+        logname  = folder * split(fname, "/")[end]
+        if isfile(logname) return end 
+        fout = open(logname, "w")
+
+
+        if isfile(logname) return end 
+        fout = open(logname, "w")
+
+        one_solve(n, Q1, Q2, fout, heur=false, preproc=2, tight_root=1)
+        close(fout)
+    end
+
+
 
 end
 
@@ -146,11 +248,7 @@ warmup(Q1, Q2, n)
 
 
 
+run(ARGS[1], ARGS[2])
 
-folder = "../instances/"
-for file in readdir(folder)
-    println("\n\nreading ", folder * file)
-    run(folder * file)
-end
 
 

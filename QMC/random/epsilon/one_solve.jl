@@ -10,7 +10,7 @@ import .MultiObjectiveAlgorithms as MOA
 function one_solve(N, Q1, Q2, fout; log=true)
 
     model = Model()
-    # set_silent(model)
+    set_silent(model)
 
     @variable(model, x[1:N], Bin)
 
@@ -76,7 +76,10 @@ function run(fname)
 
     include("../instances/" * split(fname, "/")[end])
 
-    fout = open(folder * split(fname, "/")[end] , "w")
+    logname  = folder * split(fname, "/")[end]
+    if isfile(logname) return end 
+    fout = open(logname, "w")
+
     one_solve(n, Q1, Q2, fout)
     close(fout)
 
@@ -93,15 +96,9 @@ Q2 = [0.0 41.0 47.0 39.0 0.0 39.0 36.0 42.0 0.0 48.0; 0.0 0.0 14.0 3.0 0.0 4.0 1
 
 warmup(Q1, Q2, n)
 
+println("\n\nsolving ", ARGS[1], "    with epsilon method")
 
-
-
-
-folder = "../instances/"
-for file in readdir(folder)
-    println("\n\nsolving ", folder * file, "    with epsilon method")
-    run(folder * file)
-end
+run(ARGS[1])
 
 
 
