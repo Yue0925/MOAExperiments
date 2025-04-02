@@ -86,6 +86,7 @@ function tab_fractional(fname)
 
 
     bb_heur_preproc("./TOres/Gurobi/bb_heur_preproc1/" * inst, fout)
+    bb_heur_preproc("./TOres/Gurobi/bb_heur_preproc2/" * inst, fout)
 
 
     bb_heur_preproc("./TOres/Gurobi/bb_preproc1_tightroot1/" * inst, fout)
@@ -102,35 +103,35 @@ tab_fractional(ARGS[1])
 
 
 
-function run(fname)
-    fout = open("result.tab", "a")
-    inst = split(fname, "/")[end]
+# function run(fname)
+#     fout = open("result.tab", "a")
+#     inst = split(fname, "/")[end]
 
-    n = split(inst, "_")[2]
-    d = split(inst, "_")[end-1]
+#     n = split(inst, "_")[2]
+#     d = split(inst, "_")[end-1]
 
-    print(fout, inst, " & ", n, " & ", d, " & ")
+#     print(fout, inst, " & ", n, " & ", d, " & ")
 
-    epsilon("./res/Gurobi/epsilon/" * inst, fout)
+#     epsilon("./res/Gurobi/epsilon/" * inst, fout)
 
-    bb_preproc("./res/Gurobi/bb_preproc0/" * inst, fout)
+#     bb_preproc("./res/Gurobi/bb_preproc0/" * inst, fout)
 
-    bb_preproc("./res/Gurobi/bb_preproc1/" * inst, fout)
+#     bb_preproc("./res/Gurobi/bb_preproc1/" * inst, fout)
 
-    bb_heur_preproc("./res/Gurobi/bb_heur_preproc1/" * inst, fout)
+#     bb_heur_preproc("./res/Gurobi/bb_heur_preproc1/" * inst, fout)
 
-    bb_heur_preproc("./res/Gurobi/bb_preproc1_tightroot1/" * inst, fout)
+#     bb_heur_preproc("./res/Gurobi/bb_preproc1_tightroot1/" * inst, fout)
 
-    bb_preproc("./res/Gurobi/bb_preproc2/" * inst, fout)
+#     bb_preproc("./res/Gurobi/bb_preproc2/" * inst, fout)
 
-    bb_heur_preproc("./res/Gurobi/bb_heur_preproc2/" * inst, fout)
+#     bb_heur_preproc("./res/Gurobi/bb_heur_preproc2/" * inst, fout)
 
-    bb_heur_preproc("./res/Gurobi/bb_preproc2_tightroot1/" * inst, fout)
+#     bb_heur_preproc("./res/Gurobi/bb_preproc2_tightroot1/" * inst, fout)
 
 
-    println(fout, "\\\\")
+#     println(fout, "\\\\")
 
-    close(fout)
-end
+#     close(fout)
+# end
 
-run(ARGS[1])
+# run(ARGS[1])

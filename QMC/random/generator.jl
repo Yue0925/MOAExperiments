@@ -37,12 +37,14 @@ end
 
 
 
-function completeG(n::Int64, iem::Int64)
+function completeG(n::Int64, iem::Int64, proba)
     W = zeros(Int64, n, n) ; mini = 1000
     for i in 1:n-1
         for j in i+1:n
-            W[i, j] = rand(5:50)
-            mini = (mini>W[i, j]) ? W[i, j] : mini
+            if rand(0:0.1:1)>proba
+                W[i, j] = rand(5:50)
+                mini = (mini>W[i, j]) ? W[i, j] : mini
+            end
         end        
     end
     # W_bis = zeros(Int64, n, n) ; maxi = maximum(W)
@@ -60,7 +62,7 @@ function completeG(n::Int64, iem::Int64)
     # end
 
     # --------------------
-    name = "MaxCut_$(n)_$(iem)"
+    name = "MaxCut_$(n)_$(iem)_$(round(Int, (1.0-proba)*100))"
     folder = "./instances/"
     if !isdir(folder)
         mkdir(folder)
@@ -107,9 +109,20 @@ end
 
 
 
-for n in 10:5:30
-    for iem in 1:3
-        completeG(n, iem)
-    end
+# for n in 10:5:30
+#     for iem in 1:3
+#         completeG(n, iem, 0.75)
+#     end
     
-end
+# end
+
+
+
+# folder = "./TOinstances/"
+# for file in readdir(folder)
+#     density = parse(Int64, split(file, "_")[end] )
+#     num = parse(Int64, split(file, "_")[end-1] )
+#     n = parse(Int64, split(file, "_")[end-2] )
+
+#     mv(folder * file, folder * "MaxCut_$(n)_$(density)_$num")
+# end

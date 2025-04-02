@@ -497,7 +497,7 @@ warm_up()
 
 println("\n\nsolving ", ARGS[1] , "    with ",  ARGS[2])
 
-# run( ARGS[1], ARGS[2])
+run( ARGS[1], ARGS[2])
 
 
-run3( ARGS[1], ARGS[2])
+# run3( ARGS[1], ARGS[2])

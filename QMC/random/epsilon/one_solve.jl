@@ -25,7 +25,7 @@ function one_solve(N, Q1, Q2, fout; log=true)
     set_attribute(model, MOA.Algorithm(), MOA.EpsilonConstraint())
     set_attribute(model, MOA.EpsilonConstraintStep(), 0.01)
 
-    set_time_limit_sec(model, 1800.0)
+    # set_time_limit_sec(model, 1800.0)
 
 
     optimize!(model)

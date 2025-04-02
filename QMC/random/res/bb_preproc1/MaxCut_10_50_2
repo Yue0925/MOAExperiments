@@ -1,0 +1,11 @@
+heur = false
+LBS_limit = 3
+preproc = 1
+tight_root = 0
+total_time = 0.42
+NDP = 8
+total_nodes = 163
+pruned_nodes = 82
+pruned_dominance_nodes = 45
+heur_time = 0.0
+Y_N = Any[[329.0, 228.0], [327.0, 231.0], [308.0, 262.0], [306.0, 265.0], [286.0, 283.0], [284.0, 286.0], [267.0, 291.0], [245.0, 312.0]]
