@@ -335,8 +335,6 @@ end
 function run3(fname, method)
     inst = split(fname, "/")[end]
     n = parse(Int64, split(inst, "_")[2])
-
-
     
     folder = "./TOres"
     if !isdir(folder)
@@ -348,20 +346,7 @@ function run3(fname, method)
         mkdir(folder)
     end
 
-    if method == "epsilon"
-        folder = "./TOres/Gurobi/epsilon"
-        if !isdir(folder)
-            mkdir(folder)
-        end
-
-        logname = folder * "/" *inst 
-        if isfile(logname) return end 
-        fout = open(logname, "w")
-        one_solveTO(fname, fout, algo_eps=true)
-        close(fout)
-
-    end
-
+   
     if method == "bb"
         folder = "./TOres/Gurobi/bb"
         if !isdir(folder)
@@ -495,7 +480,7 @@ println("warm up ...")
 warm_up()
 
 
-println("\n\nsolving ", ARGS[1] , "    with ",  ARGS[2])
+# println("\n\nsolving ", ARGS[1] , "    with ",  ARGS[2])
 
 run( ARGS[1], ARGS[2])
 

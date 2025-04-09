@@ -200,6 +200,9 @@ function run(fname, method)
         include("../instances/" * split(fname, "/")[end])
 
         logname  = folder * split(fname, "/")[end]
+        # todo 
+        if n < 30 return end 
+
         if isfile(logname) return end 
         fout = open(logname, "w")
 
@@ -359,10 +362,10 @@ warmup(Q1, Q2, n)
 
 
 
-# run(ARGS[1], ARGS[2])
+run(ARGS[1], ARGS[2])
 
 
-runTO(ARGS[1], ARGS[2])
+# runTO(ARGS[1], ARGS[2])
 
 
 

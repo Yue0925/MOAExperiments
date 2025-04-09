@@ -83,13 +83,17 @@ function tab_fractional(fname)
     bb_preproc("./TOres/Gurobi/bb_preproc0/" * inst, fout)
 
     bb_preproc("./TOres/Gurobi/bb_preproc1/" * inst, fout)
-
-
     bb_heur_preproc("./TOres/Gurobi/bb_heur_preproc1/" * inst, fout)
+    bb_heur_preproc("./TOres/Gurobi/bb_preproc1_tightroot1/" * inst, fout)
+
+
+    bb_preproc("./TOres/Gurobi/bb_preproc2/" * inst, fout)
+
+
     bb_heur_preproc("./TOres/Gurobi/bb_heur_preproc2/" * inst, fout)
 
 
-    bb_heur_preproc("./TOres/Gurobi/bb_preproc1_tightroot1/" * inst, fout)
+    bb_heur_preproc("./TOres/Gurobi/bb_preproc2_tightroot1/" * inst, fout)
 
 
     println(fout, "\\\\")
